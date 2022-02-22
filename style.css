@@ -1,0 +1,157 @@
+/* BASIC SETTING STARTED HERE */
+*
+{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+/* BASIC SETTING END HERE */
+/* Menu Style  */
+.menu 
+{
+    background-color: #18191A;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    align-items: center;
+}
+.menu ul 
+{
+    display: flex;
+
+}
+.menu ul li  
+{
+    list-style: none;
+    margin-left: 35px;
+}
+.menu ul li a 
+{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+.logo a
+{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 7px;
+    transition: .3s;
+}
+.logo a:hover 
+{
+   color: goldenrod;
+}
+.skill 
+{
+    position: relative;
+}
+.drowpdown-menu 
+{
+    display: flex;
+    background-color: #18191ab7;
+    position: absolute;
+    flex-direction: column;
+    padding:  10px 20px;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+    top: 20px;
+    /* border: 2px solid rgb(42, 41, 40); */
+}
+.drowpdown-menu a 
+{
+    display: inline-block;
+    margin: 10px;
+   
+}
+.skill:hover .drowpdown-menu  
+{
+    opacity: 1;
+    pointer-events: all;
+}
+.toggle-bar i 
+{
+    font-size: 40px;
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+.toggle-bar i:hover 
+{
+    color: goldenrod;
+}
+.toggle-bar 
+{
+   display: none;
+}
+.menu-item a
+{
+    transition: .3s;
+    position: relative;
+}
+.menu-item a::before
+{
+    display: block;
+    content: '';
+    height: 1px;
+    width: 0%;
+    background-color: goldenrod;
+    position: absolute;
+    bottom: -5px;
+    left: -7px;
+    transition: .3s;
+}
+.menu-item a:hover::before
+{
+    width: 130%;
+}
+.menu-item a:hover
+{
+  color: goldenrod;
+}
+
+@media screen and (max-width:914px)
+{
+    .menu 
+    {
+        padding: 30px 50px;
+    }
+}
+@media screen and (max-width:765px)
+{
+    .menu ul 
+    {
+        position: fixed;
+        top: 100px;
+        right: -50%;
+        background-color: #18191A;
+        flex-direction: column;
+        padding: 20px;
+        height: 90vh;
+        width: 50%;
+        transition: .5s;
+    }
+    .menu ul li 
+    {
+        margin:10px 0px ;
+    }
+    .toggle-bar
+    {
+        display: block;
+    }
+    .drowpdown-menu 
+    {
+        background-color: #18191A;
+    
+        z-index: 1;
+    }
+    
+}
